@@ -1,33 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-TW">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>泰國商品利潤計算機</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h2>泰國商品利潤計算機</h2>
+        <h2>🇹🇭 泰國商品利潤計算機</h2>
         <div class="input-group">
-            <label>商品售價 (台幣)</label>
+            <label for="price">商品售價 (台幣)</label>
             <input type="number" id="price" placeholder="輸入金額">
         </div>
         <div class="input-group">
-            <label>商品成本 (泰銖)</label>
+            <label for="cost">商品成本 (泰銖)</label>
             <input type="number" id="cost" placeholder="輸入金額">
         </div>
         <div class="input-group">
-            <label>匯率 (1台幣=泰銖)</label>
-            <input type="number" step="0.001" id="rate" placeholder="輸入匯率">
+            <label for="rate">匯率 (1台幣=泰銖)</label>
+            <input type="number" step="0.001" id="rate" value="1.005">
         </div>
         <div class="input-group">
-            <label>商品重量 (克)</label>
+            <label for="weight">重量 (克)</label>
             <input type="number" id="weight" placeholder="輸入重量">
         </div>
         <div class="input-group">
-            <label>海外運費 (每公斤台幣)</label>
-            <input type="number" id="shipping" placeholder="輸入金額">
+            <label for="shipping">運費/公斤 (台幣)</label>
+            <input type="number" id="shipping" value="140">
         </div>
-        <button onclick="calculate()">計算</button>
+        <button onclick="calculate()">立即計算</button>
         <div id="results"></div>
     </div>
 
