@@ -9,27 +9,40 @@
 <body>
     <div class="container">
         <h2>🇹🇭 泰國商品利潤計算機</h2>
+        <!-- 商品售價 -->
         <div class="input-group">
             <label for="price">商品售價 (台幣)</label>
             <input type="number" id="price" placeholder="輸入金額">
         </div>
-        <div class="input-group">
-            <label for="cost">商品成本 (泰銖)</label>
-            <input type="number" id="cost" placeholder="輸入金額">
+
+        <!-- 商品成本與匯率 -->
+        <div class="input-row">
+            <div class="input-group">
+                <label for="cost">商品成本 (泰銖)</label>
+                <input type="number" id="cost" placeholder="輸入金額">
+            </div>
+            <div class="input-group">
+                <label for="rate">匯率 (1台幣=泰銖)</label>
+                <input type="number" step="0.001" id="rate" value="1.005">
+            </div>
         </div>
-        <div class="input-group">
-            <label for="rate">匯率 (1台幣=泰銖)</label>
-            <input type="number" step="0.001" id="rate" value="1.005">
+
+        <!-- 重量與運費 -->
+        <div class="input-row">
+            <div class="input-group">
+                <label for="weight">重量 (克)</label>
+                <input type="number" id="weight" placeholder="輸入重量">
+            </div>
+            <div class="input-group">
+                <label for="shipping">運費/公斤 (台幣)</label>
+                <input type="number" id="shipping" value="140">
+            </div>
         </div>
-        <div class="input-group">
-            <label for="weight">重量 (克)</label>
-            <input type="number" id="weight" placeholder="輸入重量">
-        </div>
-        <div class="input-group">
-            <label for="shipping">運費/公斤 (台幣)</label>
-            <input type="number" id="shipping" value="140">
-        </div>
+
+        <!-- 計算按鈕 -->
         <button onclick="calculate()">立即計算</button>
+
+        <!-- 結果顯示 -->
         <div id="results"></div>
     </div>
 
